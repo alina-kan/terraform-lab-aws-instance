@@ -132,13 +132,13 @@ terraform {
     }
 
     # RDS Subnet Group
-    resource "aws_db_subnet_group" "rds_subnet_group" {
+    resource "aws_db_subnet_group" "Assign4_RDS_subnet_group" {
         name       = "rds-subnet-group"
         subnet_ids = [aws_subnet.private_subnet1.id, aws_subnet.private_subnet2.id]
     }
 
     # RDS Instance
-    resource "aws_db_instance" "rds" {
+    resource "aws_db_instance" "Assign4_RDS" {
         allocated_storage    = 20
         engine               = "mysql"
         engine_version       = "8.0"
